@@ -10,19 +10,20 @@ import requests
 # Create your views here.
 
 def index(request):
-    response = requests.get('https://fakestoreapi.com/products?limit=8')
-    products = response.json()
     context = {
-        'data': products,
-        'sesion': request.session,
+        'data': {},
+        'title': "PARTNER's (Tu Socio ADM)",
+        'position': 'Dashboard'
     }
-    return render(request, 'home/index.html', context)
+    return render(request, 'home/index.html', context=context)
 
 def about(request):
     context = {
         'data': {},
-        'sesion': request.session,
+        'title': 'PARTNERS (About)',
+        'position': 'About'
     }
+    print(context)
     return render(request, 'home/about.html', context=context)
 
 def contact(request):
