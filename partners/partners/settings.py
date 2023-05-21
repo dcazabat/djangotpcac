@@ -10,6 +10,9 @@ import os
 from cryptography.fernet import Fernet
 import environ
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # Agregado para no tener que crea el archivo env a mano
 file = Path(os.path.join(BASE_DIR, '.env'))
 if not file.exists():
@@ -39,9 +42,6 @@ if not file.exists():
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY=env('SECRET_KEY')
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
