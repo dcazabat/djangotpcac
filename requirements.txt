@@ -1,8 +1,13 @@
-django
-gunicorn
-python-dotenv
-whitenoise
-django-theme-soft-design==1.0.10
-
-# psycopg2-binary
-# mysqlclient
+asgiref==3.6.0
+certifi==2023.5.7
+cffi==1.15.1
+charset-normalizer==3.1.0
+cryptography==40.0.2
+Django==3.2.18
+django-environ==0.10.0
+idna==3.4
+pycparser==2.21
+pytz==2023.3
+requests==2.30.0
+sqlparse==0.4.4
+urllib3==2.0.2

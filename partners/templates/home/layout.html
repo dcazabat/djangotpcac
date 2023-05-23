@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{{ title }}</title>
+        <!-- Carga del CSS Externo -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+        <!-- Carga elementos estaticos del proyectos de (Imagenes, JS y CSS)-->
+        {% load static %}
+        <script src="{% static 'home/js/main.js' %}"></script>
+        <link rel="shortcut icon" type="image/icon" href="{% static 'home/img/favicon.ico' %}"/>
+        <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
+    </head>
+    <body>
+        <div class="h-full">
+        <!-- Navigation-->
+        {% include './navbar.html' %}
+        {% include './header.html' %}
+        {% block main %}
+        {% comment %} Carga de Views de las otras apps {% endcomment %}
+        {% endblock main %}
+        <!-- Footer-->
+        {% include './footer.html' %}
+        </div>
+    </body>
+</html>
