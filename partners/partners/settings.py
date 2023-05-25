@@ -44,7 +44,7 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY=env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -103,16 +103,16 @@ WSGI_APPLICATION = 'partners.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': env('ENGINE'),   # Cadena del motor 'django.db.backends.postgresql'
-#         'NAME': env('DATABASE'),        # Nombre de la Base de Datos 
-#         'USER': env('USERDB'),       # Usuario de la Base de Datos 
-#         'PASSWORD': env('PASSWORDDB'),    # Contraseña del Usuario
-#         'HOST': env('HOST'),            # Nombre del Host o IP donde esta ejecutandose el servidor
-#         'PORT': env('PORT'),            # Puerto al cual se debe conectar
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': env('ENGINE'),   # Cadena del motor 'django.db.backends.postgresql'
+        'NAME': env('DATABASE'),        # Nombre de la Base de Datos 
+        'USER': env('USERDB'),       # Usuario de la Base de Datos 
+        'PASSWORD': env('PASSWORDDB'),    # Contraseña del Usuario
+        'HOST': env('HOST'),            # Nombre del Host o IP donde esta ejecutandose el servidor
+        'PORT': env('PORT'),            # Puerto al cual se debe conectar
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
